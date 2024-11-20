@@ -39,7 +39,87 @@
 <h2>HW 1 Exam</h2>
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 Topic 1 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
-<h3>w10</h3>
+<h3>w11</h3>
+<p>1.</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import math
+
+def draw_circle():
+    # 圆心坐标和半径
+    center_x = 5
+    center_y = 5
+    radius = 4
+    
+    # 10x10 网格，遍历每个坐标
+    for y in range(10):
+        row = ""
+        for x in range(10):
+            # 计算当前点到圆心的距离
+            distance = math.sqrt((x - center_x) ** 2 + (y - center_y) ** 2)
+            
+            # 如果距离在圆的范围内，则打印 '*'
+            if distance &lt;= radius:
+                row += "*"
+            else:
+                row += " "
+        
+        # 输出每一行
+        print(row)
+
+# 调用函数绘制圆形
+draw_circle()
+</pre>
+<p></p>
+<p>2.</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+
+# 利用 html 建立 canvas 超文件物件
+canvas = html.CANVAS(width=400, height=400)
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+
+# 每一格的 pixel 數
+gs = 20
+
+# gs*tc = canvas width and height
+
+ctx = canvas.getContext("2d")
+
+def dRect(lux, luy, w, h, s=1, c='#ff0000'):
+    ctx.lineWidth = s
+    ctx.strokeStyle = c
+    ctx.beginPath()
+    ctx.rect(lux, luy, w, h)
+    ctx.stroke()
+    
+def grid(width, height, grid_pix):
+    # x 方向共 width 格
+    # y 方向共 height 格
+    # grid_pix, 每一個的 pixel 點數
+    # 利用迴圈與座標增量繪圖
+    for i in range(width):
+        for j in range(height):
+            dRect(i * grid_pix, j * grid_pix, grid_pix, grid_pix, 1, "lightgrey")
+
+def fill(x, y, color):
+    ctx.fillStyle = color
+    ctx.fillRect(x * gs, y * gs, gs, gs)
+
+# 繪製 10x10 的網格
+grid(10, 10, 20)
+
+# 繪製圓形
+def draw_circle(radius=4, size=10, center_x=5, center_y=5):
+    for y in range(size):
+        for x in range(size):
+            # 判斷是否在圓內
+            if (x - center_x) ** 2 + (y - center_y) ** 2 &lt;= radius ** 2:
+                fill(x, y, "black")
+
+# 呼叫函式繪製圓形
+draw_circle()
+</pre>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/WOZLQ79wbbk" width="560"></iframe></p><h3>w10</h3>
 <p>11/13</p>
 <p></p>
 <p><span>題目一</span><span>:</span></p>
