@@ -143,29 +143,92 @@ img.add_border {
         </header>
     <div id="tipue_search_content">HW 1 Exam << <a href='HW 1 Exam.html'>Previous</a> <a href='w14_ex.html'>Next</a> >> w14_ex<br /><h1>w15</h1>
 <p>12/18</p>
+<p><a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/cf82cb7f4073e040906a008a048a45ba/raw/55be613c0c706f3842f840b8e0e08ebe40b1cda0/w15.1">題目一: 從 1 累加到 100"作為 anchor 的連結標題</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">print(sum(range(1, 101)))
 </pre>
 <p></p>
-<p>一. 當你寫 <code>sum(range(1, 101))</code> 時，這其實是兩個東西在一起發揮作用。</p>
-<ol>
-<li>
-<p><strong><code>range(1, 101)</code></strong>：<br/>這個部分就像是告訴電腦：「嘿，我想要一個數字的清單，從 1 開始，一直到 100」。所以 <code>range(1, 101)</code> 會產生一個數字序列：1, 2, 3, … 一直到 100。</p>
-</li>
-<li>
-<p><strong><code>sum()</code></strong>：<br/>接下來，<code>sum()</code> 是讓電腦將這些數字加起來。也就是說，<code>sum(range(1, 101))</code> 就是讓電腦將從 1 到 100 的數字都加起來，然後算出總和。</p>
-</li>
-<li><span class="base"><span class="mord cjk_fallback">總和</span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span>2</span><span><span class="pstrut"></span><span class="frac-line"></span></span><span><span class="pstrut"></span>100<span class="mspace"></span><span class="mbin">×</span><span class="mspace"></span><span class="mopen">(</span>1<span class="mspace"></span><span class="mbin">+</span><span class="mspace"></span>100<span class="mclose">)</span></span></span><span class="vlist-s"></span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span>2</span><span><span class="pstrut"></span><span class="frac-line"></span></span><span><span class="pstrut"></span>100<span class="mspace"></span><span class="mbin">×</span><span class="mspace"></span>101</span></span><span class="vlist-s"></span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord">5050</span></span><span class="base"><span class="mord"></span></span></li>
-</ol>
-<p><span class="base"><span class="mord">二. </span></span></p>
-<p>def addto(start, end):<br/> return sum(range(start, end + 1))</p>
-<ol>
-<li># 呼叫函式<br/>result = addto(1, 100)<br/>print(result)</li>
-<li><code></code></li>
-<li><code></code></li>
-<li><code>addto(start, end)</code> 是一個函式，接受兩個參數 <code>start</code> 和 <code>end</code>，這是累加範圍的開始和結束數字。</li>
-<li>函式內部使用 <code>range(start, end + 1)</code> 來生成從 <code>start</code> 到 <code>end</code> 的整數序列，並使用 <code>sum()</code> 函數來計算這些數字的總和。</li>
-<li><code>end + 1</code> 是因為 <code>range()</code> 的結束值是排除的，因此我們需要將 <code>end</code> 增加 1。</li>
-</ol><br />HW 1 Exam << <a href='HW 1 Exam.html'>Previous</a> <a href='w14_ex.html'>Next</a> >> w14_ex</div>
+<p>1.當你寫 <code>sum(range(1, 101))</code> 時，這其實是兩個東西在一起發揮作用。</p>
+<p></p>
+<p><strong><code>2.range(1, 101)</code></strong>：<br/>這個部分就像是告訴電腦：「嘿，我想要一個數字的清單，從 1 開始，一直到 100」。所以 <code>range(1, 101)</code> 會產生一個數字序列：1, 2, 3, … 一直到 100。</p>
+<p></p>
+<p><strong><code>3.sum()</code></strong>：<br/>接下來，<code>sum()</code> 是讓電腦將這些數字加起來。也就是說，<code>sum(range(1, 101))</code> 就是讓電腦將從 1 到 100 的數字都加起來，然後算出總和。</p>
+<p><span class="base"><span class="mord cjk_fallback">4.總和</span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span>2</span><span><span class="pstrut"></span><span class="frac-line"></span></span><span><span class="pstrut"></span>100<span class="mspace"></span><span class="mbin">×</span><span class="mspace"></span><span class="mopen">(</span>1<span class="mspace"></span><span class="mbin">+</span><span class="mspace"></span>100<span class="mclose">)</span></span></span><span class="vlist-s"></span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span>2</span><span><span class="pstrut"></span><span class="frac-line"></span></span><span><span class="pstrut"></span>100<span class="mspace"></span><span class="mbin">×</span><span class="mspace"></span>101</span></span><span class="vlist-s"></span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord">5050</span></span><span class="base"><span class="mord"></span></span></p>
+<p><span class="base"><span class="mord"></span></span></p>
+<p><span class="base"><span class="mord"></span></span></p>
+<p><a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/cf82cb7f4073e040906a008a048a45ba/raw/bb6db381408d514c25604b14e66a11942dd1c5d3/w15.2"><span class="base"><span class="mord"><span></span></span> 題目二: <span>以"addto"作為連結標題</span></span></a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def addto(init, upto):
+    # 使用公式計算總和
+    sum_upto = upto * (upto + 1) // 2
+    sum_init_minus_1 = (init - 1) * init // 2
+    return sum_upto - sum_init_minus_1
+
+# 主程式
+init = 1
+upto = 100
+# 呼叫 addto 函式
+result = addto(init, upto)
+print(f"從{init}累加到{upto}={result}")
+</pre>
+<p><br/><span></span></p>
+<p></p>
+<p><a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/cf82cb7f4073e040906a008a048a45ba/raw/b2babb9df14e3778f5b8be2e165fe4c94046d3e6/w15.3">題目三: a</a><a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/cf82cb7f4073e040906a008a048a45ba/raw/b2babb9df14e3778f5b8be2e165fe4c94046d3e6/w15.3">dd_only_even 作為連結標題.</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def addto(init, upto):
+    # 計算從 init 到 upto 之間所有偶數的和
+    # 找到範圍內的第一個偶數
+    if init % 2 != 0:
+        init += 1  # 若起始數字為奇數，則跳過此數字，從下一個偶數開始
+    
+    # 找到範圍內的最後一個偶數
+    if upto % 2 != 0:
+        upto -= 1  # 若終止數字為奇數，則調整為上一個偶數
+    
+    # 偶數總和公式：等差數列求和
+    n = (upto - init) // 2 + 1  # 計算偶數的個數
+    sum_even = n * (init + upto) // 2  # 等差數列求和公式：n * (首項 + 末項) / 2
+    
+    return sum_even
+
+# 主程式
+init = 1
+upto = 100
+# 呼叫 addto 函式
+result = addto(init, upto)
+print(f"從{init}累加到{upto}的偶數和={result}")
+</pre>
+<p><span> </span></p>
+<p><span></span></p>
+<p><a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/cf82cb7f4073e040906a008a048a45ba/raw/4ffc8a6d5b97bddb92efea6e2cf2a770df6510b2/w15.4">題目四: 以 add_avoid_8 作為連結標題.</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def addto(init, upto):
+    # 找到範圍內的第一個尾數為 8 的數字
+    if init % 10 &lt;= 8:
+        start = init + (8 - init % 10)
+    else:
+        start = init + (18 - init % 10)
+    
+    # 找到範圍內的最後一個尾數為 8 的數字
+    if upto % 10 &gt;= 8:
+        end = upto - (upto % 10 - 8)
+    else:
+        end = upto - (upto % 10 + 2)
+    
+    # 如果 start &gt; end，則沒有符合條件的數字
+    if start &gt; end:
+        return 0
+    
+    # 計算這些數字的總和
+    n = (end - start) // 10 + 1  # 這些數字的個數
+    total_sum = n * (start + end) // 2  # 等差數列求和公式：n * (首項 + 末項) / 2
+    
+    return total_sum
+
+# 主程式
+init = 1
+upto = 100
+# 呼叫 addto 函式
+result = addto(init, upto)
+print(f"從{init}累加到{upto}，只加尾數為8的數={result}")
+</pre>
+<p><span> </span></p><br />HW 1 Exam << <a href='HW 1 Exam.html'>Previous</a> <a href='w14_ex.html'>Next</a> >> w14_ex</div>
         
     <!-- footer -->
       <div class="container">
