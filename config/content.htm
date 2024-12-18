@@ -40,11 +40,21 @@
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 Topic 1 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
 <p></p>
-<h3>w15_ex</h3>
+<h3>w15</h3>
 <p>12/18</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">print(sum(range(1, 101)))
 </pre>
-<p></p><h3>w14_ex</h3>
+<p></p>
+<p>當你寫 <code>sum(range(1, 101))</code> 時，這其實是兩個東西在一起發揮作用。</p>
+<ol>
+<li>
+<p><strong><code>range(1, 101)</code></strong>：<br/>這個部分就像是告訴電腦：「嘿，我想要一個數字的清單，從 1 開始，一直到 100」。所以 <code>range(1, 101)</code> 會產生一個數字序列：1, 2, 3, … 一直到 100。</p>
+</li>
+<li>
+<p><strong><code>sum()</code></strong>：<br/>接下來，<code>sum()</code> 是讓電腦將這些數字加起來。也就是說，<code>sum(range(1, 101))</code> 就是讓電腦將從 1 到 100 的數字都加起來，然後算出總和。</p>
+</li>
+<li><span class="base"><span class="mord cjk_fallback">總和</span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span>2</span><span><span class="pstrut"></span><span class="frac-line"></span></span><span><span class="pstrut"></span>100<span class="mspace"></span><span class="mbin">×</span><span class="mspace"></span><span class="mopen">(</span>1<span class="mspace"></span><span class="mbin">+</span><span class="mspace"></span>100<span class="mclose">)</span></span></span><span class="vlist-s"></span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span>2</span><span><span class="pstrut"></span><span class="frac-line"></span></span><span><span class="pstrut"></span>100<span class="mspace"></span><span class="mbin">×</span><span class="mspace"></span>101</span></span><span class="vlist-s"></span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord">5050</span></span></li>
+</ol><h3>w14_ex</h3>
 <p>12/11</p>
 <p><a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/41323252/22a7342a163cc3e440ad89fa8b4274b5/raw/1ca4a1d4ef6c6c9b906c8e93eb205f8cba6a8685/w14_ex">三個圓相交重疊會重新產生顏色</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
