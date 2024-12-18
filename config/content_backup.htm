@@ -40,12 +40,12 @@
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 Topic 1 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
 <p></p>
-<h3>w15_ex</h3>
+<h3>w15</h3>
 <p>12/18</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">print(sum(range(1, 101)))
 </pre>
 <p></p>
-<p>當你寫 <code>sum(range(1, 101))</code> 時，這其實是兩個東西在一起發揮作用。</p>
+<p>一. 當你寫 <code>sum(range(1, 101))</code> 時，這其實是兩個東西在一起發揮作用。</p>
 <ol>
 <li>
 <p><strong><code>range(1, 101)</code></strong>：<br/>這個部分就像是告訴電腦：「嘿，我想要一個數字的清單，從 1 開始，一直到 100」。所以 <code>range(1, 101)</code> 會產生一個數字序列：1, 2, 3, … 一直到 100。</p>
@@ -53,10 +53,20 @@
 <li>
 <p><strong><code>sum()</code></strong>：<br/>接下來，<code>sum()</code> 是讓電腦將這些數字加起來。也就是說，<code>sum(range(1, 101))</code> 就是讓電腦將從 1 到 100 的數字都加起來，然後算出總和。</p>
 </li>
-<li><span class="base"><span class="mord cjk_fallback">總和</span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span>2</span><span><span class="pstrut"></span><span class="frac-line"></span></span><span><span class="pstrut"></span>100<span class="mspace"></span><span class="mbin">×</span><span class="mspace"></span><span class="mopen">(</span>1<span class="mspace"></span><span class="mbin">+</span><span class="mspace"></span>100<span class="mclose">)</span></span></span><span class="vlist-s"></span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span>2</span><span><span class="pstrut"></span><span class="frac-line"></span></span><span><span class="pstrut"></span>100<span class="mspace"></span><span class="mbin">×</span><span class="mspace"></span>101</span></span><span class="vlist-s"></span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord">5050</span></span></li>
+<li><span class="base"><span class="mord cjk_fallback">總和</span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span>2</span><span><span class="pstrut"></span><span class="frac-line"></span></span><span><span class="pstrut"></span>100<span class="mspace"></span><span class="mbin">×</span><span class="mspace"></span><span class="mopen">(</span>1<span class="mspace"></span><span class="mbin">+</span><span class="mspace"></span>100<span class="mclose">)</span></span></span><span class="vlist-s"></span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span>2</span><span><span class="pstrut"></span><span class="frac-line"></span></span><span><span class="pstrut"></span>100<span class="mspace"></span><span class="mbin">×</span><span class="mspace"></span>101</span></span><span class="vlist-s"></span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord">5050</span></span><span class="base"><span class="mord"></span></span></li>
+</ol>
+<p><span class="base"><span class="mord">二. </span></span></p>
+<p>def addto(start, end):<br/> return sum(range(start, end + 1))</p>
+<ol>
+<li># 呼叫函式<br/>result = addto(1, 100)<br/>print(result)</li>
+<li><code></code></li>
+<li><code></code></li>
+<li><code>addto(start, end)</code> 是一個函式，接受兩個參數 <code>start</code> 和 <code>end</code>，這是累加範圍的開始和結束數字。</li>
+<li>函式內部使用 <code>range(start, end + 1)</code> 來生成從 <code>start</code> 到 <code>end</code> 的整數序列，並使用 <code>sum()</code> 函數來計算這些數字的總和。</li>
+<li><code>end + 1</code> 是因為 <code>range()</code> 的結束值是排除的，因此我們需要將 <code>end</code> 增加 1。</li>
 </ol><h3>w14_ex</h3>
 <p>12/11</p>
-<p><a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/41323252/22a7342a163cc3e440ad89fa8b4274b5/raw/1ca4a1d4ef6c6c9b906c8e93eb205f8cba6a8685/w14_ex">三個圓相交重疊會重新產生顏色</a></p>
+<p><a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/22a7342a163cc3e440ad89fa8b4274b5/raw/1ca4a1d4ef6c6c9b906c8e93eb205f8cba6a8685/w14_ex">三個圓相交重疊會重新產生顏色</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
 from browser import document as doc
 import random
@@ -166,10 +176,9 @@ x3, y3, r3 = 200, 100, 100  # 圓3：圓心 (200, 100)，半徑 100
 
 # 呼叫畫圓函式，並繪製三個圓
 draw_circles(x1, y1, r1, x2, y2, r2, x3, y3, r3)</pre>
-<p><br/><br/></p>
-<h3>w13_hw</h3>
+<p><br/><br/></p><h3>w13_hw</h3>
 <p>12/4</p>
-<p><a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/41323252/213c72490185272ee917993781781f5c/raw/307bc344ffe4a7ef68a63da418f1bbc66a41b09b/w13.py">一個紅色格子</a></p>
+<p><a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/213c72490185272ee917993781781f5c/raw/307bc344ffe4a7ef68a63da418f1bbc66a41b09b/w13.py">一個紅色格子</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
 from browser import document as doc
 
@@ -197,7 +206,7 @@ for i in range(width):
      ctx.rect(i*gs,j*gs,gs,gs)
      ctx.stroke();
      </pre>
-<p><a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/41323252/213c72490185272ee917993781781f5c/raw/e9f37189dececefd952cb218814f471ae1bf7806/w13.py2">兩個紅色格子重疊</a></p>
+<p><a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/213c72490185272ee917993781781f5c/raw/e9f37189dececefd952cb218814f471ae1bf7806/w13.py2">兩個紅色格子重疊</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
 from browser import document as doc
 
@@ -233,7 +242,7 @@ for i in range(width):
      ctx.beginPath();
      ctx.rect(i*gs+50,j*gs+50,gs,gs)
      ctx.stroke();</pre>
-<p><a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/41323252/213c72490185272ee917993781781f5c/raw/468f76799748a8f92abef8d95814d5c7eb473486/w13.py3">兩個紅色格子重疊加圓圈</a></p>
+<p><a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/213c72490185272ee917993781781f5c/raw/468f76799748a8f92abef8d95814d5c7eb473486/w13.py3">兩個紅色格子重疊加圓圈</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html, document as doc, window
  
 # Create canvas element
@@ -324,7 +333,7 @@ def draw_circle(event):
 context_menu.children[0].bind("click", clear_canvas)  # First button: Clear canvas
 context_menu.children[1].bind("click", draw_circle)  # Second button: Draw a circle</pre>
 <p></p>
-<p><a href="https://mde.tw/cp2024/content/Brython.html?src=https://gist.githubusercontent.com/41323252/213c72490185272ee917993781781f5c/raw/77c2d02cb2afb768b9b0799bd3e5db4e77cefa30/w13.py4">兩個紅色格子重疊加圓圈加連</a>線</p>
+<p><a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/213c72490185272ee917993781781f5c/raw/77c2d02cb2afb768b9b0799bd3e5db4e77cefa30/w13.py4">兩個紅色格子重疊加圓圈加連</a>線</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html, document as doc, window
 import math
  
@@ -490,8 +499,7 @@ ctx.moveTo(60, 60)
 ctx.lineTo(360, 360)
 ctx.stroke()</pre>
 <p></p>
-<p>這次使用 Brython 在網頁上繪製了重疊的矩形、圓形和對角線，並加入了不同顏色的變化，讓我受益良多。</p>
-<h3>w11_hw</h3>
+<p>這次使用 Brython 在網頁上繪製了重疊的矩形、圓形和對角線，並加入了不同顏色的變化，讓我受益良多。</p><h3>w11_hw</h3>
 <p>1.</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import math
 

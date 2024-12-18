@@ -146,7 +146,7 @@ img.add_border {
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">print(sum(range(1, 101)))
 </pre>
 <p></p>
-<p>當你寫 <code>sum(range(1, 101))</code> 時，這其實是兩個東西在一起發揮作用。</p>
+<p>一. 當你寫 <code>sum(range(1, 101))</code> 時，這其實是兩個東西在一起發揮作用。</p>
 <ol>
 <li>
 <p><strong><code>range(1, 101)</code></strong>：<br/>這個部分就像是告訴電腦：「嘿，我想要一個數字的清單，從 1 開始，一直到 100」。所以 <code>range(1, 101)</code> 會產生一個數字序列：1, 2, 3, … 一直到 100。</p>
@@ -154,7 +154,17 @@ img.add_border {
 <li>
 <p><strong><code>sum()</code></strong>：<br/>接下來，<code>sum()</code> 是讓電腦將這些數字加起來。也就是說，<code>sum(range(1, 101))</code> 就是讓電腦將從 1 到 100 的數字都加起來，然後算出總和。</p>
 </li>
-<li><span class="base"><span class="mord cjk_fallback">總和</span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span>2</span><span><span class="pstrut"></span><span class="frac-line"></span></span><span><span class="pstrut"></span>100<span class="mspace"></span><span class="mbin">×</span><span class="mspace"></span><span class="mopen">(</span>1<span class="mspace"></span><span class="mbin">+</span><span class="mspace"></span>100<span class="mclose">)</span></span></span><span class="vlist-s"></span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span>2</span><span><span class="pstrut"></span><span class="frac-line"></span></span><span><span class="pstrut"></span>100<span class="mspace"></span><span class="mbin">×</span><span class="mspace"></span>101</span></span><span class="vlist-s"></span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord">5050</span></span></li>
+<li><span class="base"><span class="mord cjk_fallback">總和</span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span>2</span><span><span class="pstrut"></span><span class="frac-line"></span></span><span><span class="pstrut"></span>100<span class="mspace"></span><span class="mbin">×</span><span class="mspace"></span><span class="mopen">(</span>1<span class="mspace"></span><span class="mbin">+</span><span class="mspace"></span>100<span class="mclose">)</span></span></span><span class="vlist-s"></span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span>2</span><span><span class="pstrut"></span><span class="frac-line"></span></span><span><span class="pstrut"></span>100<span class="mspace"></span><span class="mbin">×</span><span class="mspace"></span>101</span></span><span class="vlist-s"></span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord">5050</span></span><span class="base"><span class="mord"></span></span></li>
+</ol>
+<p><span class="base"><span class="mord">二. </span></span></p>
+<p>def addto(start, end):<br/> return sum(range(start, end + 1))</p>
+<ol>
+<li># 呼叫函式<br/>result = addto(1, 100)<br/>print(result)</li>
+<li><code></code></li>
+<li><code></code></li>
+<li><code>addto(start, end)</code> 是一個函式，接受兩個參數 <code>start</code> 和 <code>end</code>，這是累加範圍的開始和結束數字。</li>
+<li>函式內部使用 <code>range(start, end + 1)</code> 來生成從 <code>start</code> 到 <code>end</code> 的整數序列，並使用 <code>sum()</code> 函數來計算這些數字的總和。</li>
+<li><code>end + 1</code> 是因為 <code>range()</code> 的結束值是排除的，因此我們需要將 <code>end</code> 增加 1。</li>
 </ol><br />HW 1 Exam << <a href='HW 1 Exam.html'>Previous</a> <a href='w14_ex.html'>Next</a> >> w14_ex</div>
         
     <!-- footer -->
