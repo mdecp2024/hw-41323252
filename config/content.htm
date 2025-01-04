@@ -564,7 +564,42 @@ ctx.lineTo(360, 360)
 ctx.stroke()</pre>
 <p></p>
 <p>這次使用 Brython 在網頁上繪製了重疊的矩形、圓形和對角線，並加入了不同顏色的變化，讓我受益良多。</p>
-<h3>w11_hw</h3>
+<p></p>
+<h3>w12_hw</h3>
+<p>第一題:Text, questions, and art (文字、問題和藝術)</p>
+<p>說明:Strings, input(), and print() (字串、input()和print())</p>
+<p><span>input()程式範例:<a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/836648d963d26a4de23ca1165e9fc001/raw/a156e8555c02b0306e1c0c6771e57ebcecce1c4d/w12%25201">What's your name?</a></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">input("What's your name?")</pre>
+<p><span>print()程式範例:<a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/836648d963d26a4de23ca1165e9fc001/raw/65d6c366b47b7b65596bdd110158e03dd140147a/w12%25202">cat</a></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">print ("   /\_/\   ")
+print (" &gt;^.^&lt;   ")
+print ("    / \    ")
+print ("   (___)___")</pre>
+<p>第二題:Events and favorites(活動和最愛)</p>
+<p>說明:Variables and string concatenation(變數和字串連接)</p>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/836648d963d26a4de23ca1165e9fc001/raw/d1960fbe43ae81039cea2482db73db7740267ada/w12%25203">名字</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">first_name = "bo" #變數first_name為"自己的姓"
+last_name  = "rui" #變數last_name為"自己的名"
+print (first_name) #列印變數first_name
+print (last_name) #列印變數last_name</pre>
+<p><span>範例程式:<a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/836648d963d26a4de23ca1165e9fc001/raw/46915d09fc4aea06aaed4b8a3233185b4eb552d4/w12%25204">名字+最愛的食物</a></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">name = input("What's your name?") #變數name為input所輸入之文字
+favorite_food = input ("What is your favorite food?") #變數favorite_food為input所輸入之文字
+print ("Hi! My name is " + name) #列印"Hi! My name is "(這段為文字) + name(name這個變數的數值)
+print ("My favorite food is " + favorite_food)  #列印"My favorite food is "(這段為文字) + favorite_food(favorite_food這個變數的數值)
+print (name + "'s favorite food is " + favorite_food) #列印name (數值)+ 's favorite food is (此段為文字)+favorite_food(數值)</pre>
+<p>第三題:In a bookstore(在書店)</p>
+<p>說明:Lists and if... in... / else... (列表和<span>if... in... / else...)</span></p>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/836648d963d26a4de23ca1165e9fc001/raw/3877d20c7989379b012a9aead7f9a5a1d8f1a0a1/w12%25206">if</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">programming_books = ["Learn python", "Python for all",  "Intro to python"]
+print (programming_books)
+wanted_book = input("Hi! What book would you like to buy?")
+print (wanted_book)
+if wanted_book in programming_books:
+    print ("Yes, we sell it!")
+else:
+    print ("Sorry, we don't sell that book")</pre>
+<p></p><h3>w11_hw</h3>
 <p>1.</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import math
 
@@ -925,7 +960,8 @@ def main():
 # 运行主程式
 main()
 </script>
-</p><h1>HW 3</h1>
+</p>
+<h1>HW 3</h1>
 <h4>主題: Python 的數字、演算法與迴圈 (20%)</h4>
 <p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 4 and Part 5</p>
 <p>完成上述流程整理後, 請將 HW3 自評分數輸入 cp2024 自評表單中.\</p>
@@ -1156,7 +1192,8 @@ if __name__ == "__main__":
     ctx, offset_x, offset_y = draw_maze(maze_angle)
     label_coordinate(ctx, offset_x, offset_y, text_angle)
 </script>
-</p><h1>HW 4</h1>
+</p>
+<h1>HW 4</h1>
 <h4>主題: 利用 Python 控制機電模擬系統 (20%)</h4>
 <p style="padding-left: 30px;">利用 <a href="https://solvespace.com/">https://solvespace.com/</a> 建立機械系統零組件</p>
 <p style="padding-left: 30px;">利用 <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> 建立機電模擬系統</p>
@@ -1501,7 +1538,8 @@ if __name__ == "__main__":
     draw_path(ctx, offset_x, offset_y, maze_angle, path, pixel_scale)
     label_coordinate(ctx, offset_x, offset_y, text_angle)
 </script>
-</p><h1>Final Report</h1>
+</p>
+<h1>Final Report</h1>
 <p>期末口頭與書面專題報告 (20%)</p>
 <p>期末口頭專題報告影片:</p>
 <p style="padding-left: 30px;">......</p>
