@@ -175,6 +175,98 @@ if wanted_book in programming_books:
     print ("Yes, we sell it!")
 else:
     print ("Sorry, we don't sell that book")</pre>
+<p>第四題:Grocery shopping(雜貨店購物)</p>
+<p>說明:List methods: .append() and .remove() (列表方法:<span>.append() and .remove())</span></p>
+<p><span>範例程式:<a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/836648d963d26a4de23ca1165e9fc001/raw/0c9787a5f79cc3e2507f49e859e1af6eb384cc64/w12%25207">append() and remove()</a></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">shopping_list = ["carrots", "chocolate", "olives"]
+print (shopping_list)
+new_item = input("What else do I have to buy?")
+
+if new_item in shopping_list:
+    print (new_item + " is/are already in the shopping list")
+    print (shopping_list) 
+else:
+    shopping_list.append(new_item)
+    print (shopping_list)
+    item_to_remove = input("What do I have to remove?")
+
+if item_to_remove in shopping_list:
+    shopping_list.remove(item_to_remove)
+    print (shopping_list)
+else:
+    print (item_to_remove + " is/are not in the list")
+    print (shopping_list)</pre>
+<p>第五題:Customizing the burger menu(自訂漢堡菜單)</p>
+<p>說明:List methods: .index(), .pop(), and .insert() (列表方法:<span>.index(), .pop(), and .insert())</span></p>
+<p><span>範例程式:<a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/836648d963d26a4de23ca1165e9fc001/raw/f9dbf2ba88a2421778c2cb2335fc19ba6021c4ef/w12%25208">menu</a></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">todays_menu = ["burger", "salad", "coke"]
+print(todays_menu)
+side_dish_index = todays_menu.index("salad")
+print (side_dish_index)
+todays_menu.pop(side_dish_index)
+print (todays_menu)
+todays_menu.insert(side_dish_index, "fries")
+print (todays_menu)</pre>
+<p><span>第六題:</span>Traveling around the world<span>(環遊世界</span><span>)</span></p>
+<p><span>說明:</span>List slicing(清單切片)</p>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/836648d963d26a4de23ca1165e9fc001/raw/d17c2178189ac5ab57c1b292fe8ace1e9e756ddc/w12%25209">城市</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">cities = ["San Diego", "Prague", "Cape Town", "Tokyo", "Melbourne"]
+print (cities)
+print (cities[1])
+print (cities[1:4])
+print (cities[1:4:2])
+print (cities[0:3])
+print (cities[:3])
+print (cities[2:5])
+print (cities[2:])
+print (cities[0:5:2])
+print (cities[::2])
+print (cities[4])
+print (cities[-1])
+print (cities[-4:-1])
+cities[3:0:-1]
+cities[-2:-5:-1]
+print (cities[::-1])</pre>
+<p><span>第七題:</span>Senses, planets, and a house(感官、行星和房子)</p>
+<p><span>說明:</span>Changing, adding, and removing list elements using slicing(使用切片更改、新增和刪除清單元素)</p>
+<p>範例程式:<a href="https://gist.githubusercontent.com/41323252/836648d963d26a4de23ca1165e9fc001/raw/20d5c35d7836db049c2c9c781d3cdfa4c4d25ccb/w12%252010">感官</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">senses = ["eyes", "nose", "ears", "tongue", "skin"]
+print (senses)
+senses[1] = "smell"
+print (senses)
+senses[3:5] = ["taste", "touch"]
+print (senses)
+senses[0:3:2] = ["sight", "hearing"]
+print (senses)</pre>
+<p><span>範例程式:<a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/836648d963d26a4de23ca1165e9fc001/raw/5b5bb82c4669f79dfcdbe254af452a38de75ca32/w12%252011">行星</a></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">planets = ["Mercury", "Mars", "Earth", "Neptune"]
+print (planets)
+planets = planets + ["Jupiter"]
+print (planets)
+planets = planets[0:2] + ["Venus"] + planets[2:5]
+print (planets)
+planets = planets[:5] + ["Uranus", "Saturn"] + planets[5:]
+print(planets)</pre>
+<p></p>
+<p><span>範例程式:房子</span></p>
+<p><span></span></p>
+<p><span>第八題:</span>My friends' favorite dishes(我朋友最喜歡的菜)</p>
+<p><span>說明:</span>for ... in range() (在...範圍內())</p>
+<p>範例程式:<a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/836648d963d26a4de23ca1165e9fc001/raw/efb936cdd275bb8b2565d121237e8b3f857917e8/w12%252012">菜</a></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">friends = ["Geetha", "Luca", "Daisy", "Juhan"]
+dishes  = ["sushi", "burgers", "tacos", "pizza"]
+print ("My friends' names are:")
+print (friends)
+for index in range (0,4):
+    print ("index:  " + str(index))
+    print ("friend: " + friends[index])
+    print ("Their favorite dishes are:")
+print (dishes)
+for index in range (0,4):
+    print ("index:  " + str(index))
+    print ("dish: " + dishes[index])
+    for index in range (0,4):
+    print ("My friend " + friends[index] + "'s favorite dish is " + dishes[index])</pre>
 <p></p><br />w13_hw << <a href='w13_hw.html'>Previous</a> <a href='w11_hw.html'>Next</a> >> w11_hw</div>
         
     <!-- footer -->
