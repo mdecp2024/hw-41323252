@@ -98,7 +98,17 @@ result = addto(init, upto)
 print(f"從{init}累加到{upto}的偶數和={result}")
 </pre>
 <p><span> </span></p>
-<p><span></span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def add_only_even(start, end):
+    sum = 0
+    for i in range(start, end + 1):
+        if i % 2 == 0:  # Check if the number is even
+            sum += i
+    return sum
+  
+# 使用函式進行計算
+result = add_only_even(1, 100)
+print("從1累加到100的偶數總和是:", result)</pre>
+<p><span> </span></p>
 <p><a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/cf82cb7f4073e040906a008a048a45ba/raw/4ffc8a6d5b97bddb92efea6e2cf2a770df6510b2/w15.4">題目四: 以 add_avoid_8 作為連結標題.</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def addto(init, upto):
     # 找到範圍內的第一個尾數為 8 的數字
@@ -131,7 +141,18 @@ result = addto(init, upto)
 print(f"從{init}累加到{upto}，只加尾數為8的數={result}")
 </pre>
 <p><span> </span></p>
-<h3>w14_ex</h3>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def add_avoid_8(start, end):
+    total = 0
+    for i in range(start, end + 1):
+        if '8' not in str(i):  # 將數字轉成字串檢查是否包含 '8'
+            total += i
+    return total
+  
+# 測試範例
+result = add_avoid_8(1, 100)
+print("從 1 累加到 100，避開數字包含 '8' 的總和是:", result)
+</pre>
+<p></p><h3>w14_ex</h3>
 <p>12/11</p>
 <p><a href="https://mdecp2024.github.io/hw-41323252/content/Brython.html?src=https://gist.githubusercontent.com/41323252/22a7342a163cc3e440ad89fa8b4274b5/raw/1ca4a1d4ef6c6c9b906c8e93eb205f8cba6a8685/w14_ex">三個圓相交重疊會重新產生顏色</a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
